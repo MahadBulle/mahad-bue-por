@@ -1,0 +1,14 @@
+MAHAD BULE — PORTFOLIO OVERVIEW
+
+GitHub: https://github.com/MahadBulle
+
+A personal portfolio with a clean visual direction, responsive layouts
+and interactive interface concepts.
+
+WEBSITE TECHNOLOGY
+Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, Radix UI
+
+The concept gallery contains illustrative interface designs.
+It does not represent completed client commissions.
+
+Visit GitHub to explore the account's repositories.

@@ -31,16 +31,16 @@ The first install creates a package-lock.json. Commit it to pin the resolved dep
 - Working project category filters and accessible project detail dialogs.
 - Light/dark themes, persisted with next-themes; light by default.
 - Responsive mobile navigation, keyboard focus styles, skip link and reduced-motion support.
-- Contact form validates input and opens WhatsApp with a prefilled message. It does not store submissions or claim to send email.
+- GitHub contact links and a working profile-link clipboard action. No contact submissions are stored.
 - Downloadable text professional profile.
 - Metadata, favicon and a custom not-found page.
 - Source-owned shadcn/ui Button and Dialog, with components.json configured for adding further components.
 
 ## Personalise
 
-Edit `lib/data.ts` for identity, contact links, projects and skills. The portrait uses the account's GitHub avatar. Replace it with a local portrait and update `app/page.tsx` if desired. Edit biography text in `app/page.tsx`, styling in `app/globals.css`, and the downloadable profile in `public/Mahad-Bule-Profile.txt`.
+Edit `lib/data.ts` for identity, contact links, projects and skills. The hero uses a custom local monogram illustration. Replace it with an authorised local portrait and update `app/page.tsx` if desired. Edit biography text in `app/page.tsx`, styling in `app/globals.css`, and the downloadable profile in `public/Mahad-Bule-Profile.txt`.
 
-Project artwork is an **illustrative interface**, clearly labelled in the UI. It is not a screenshot and does not claim client revenue, customer counts or performance results. Only KACDO has a verified public project URL; other projects offer project details and a contact action.
+The gallery contains **illustrative interface concepts**, clearly labelled in the UI. It does not claim completed client commissions, client revenue, customer counts or real performance results. Profile and contact content use only the supplied name and GitHub account. Add real projects and approved contact details in lib/data.ts.
 
 ## Deploy to Vercel
 
@@ -53,7 +53,7 @@ npx playwright install --with-deps chromium
 npm run test:e2e
 ```
 
-Playwright checks filtering, project details, mobile navigation, theme switching, and the generated WhatsApp URL using a local interception. It also saves desktop and mobile screenshots.
+Playwright checks filtering, project details, mobile navigation, theme switching, and the GitHub profile clipboard action. It also saves desktop and mobile screenshots.
 
 ## Stack credits
 
