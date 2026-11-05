@@ -1,0 +1,40 @@
+name: Verify portfolio
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install dependencies
+        run: npm install
+      - name: Production build
+        run: npm run build
+      - name: Type check
+        run: npm run typecheck
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Check portfolio interactions
+        run: npm run test:e2e
+      - name: Save verification screenshots and traces
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-verification
+          path: test-results/
+          retention-days: 7
+      - name: Save resolved dependency versions
+        uses: actions/upload-artifact@v4
+        with:
+          name: dependency-lock
+          path: package-lock.json
+          retention-days: 7
