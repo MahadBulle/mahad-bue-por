@@ -1,60 +1,19 @@
-# Mahad Bule — Personal Portfolio
+# Mahad Bule Portfolio
 
-A complete responsive portfolio built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, **Tailwind CSS 4**, and **shadcn/ui** components using Radix primitives.
+Next.js 16, React, TypeScript, Tailwind CSS 4 and shadcn/ui.
 
-## Run locally
+## Development
 
-Node.js 22 or newer is required.
+Node.js 22+: run `npm install`, then `npm run dev`.
 
-```bash
-git clone https://github.com/MahadBulle/mahad-bue-por.git
-cd mahad-bue-por
-npm install
-npm run dev
-```
+## Verification
 
-Open http://localhost:3000.
+Run `npm run build`, `npm run typecheck` and `npm run test:e2e` (install Chromium with `npx playwright install --with-deps chromium`).
 
-## Production checks
+## Content
 
-```bash
-npm run typecheck
-npm run build
-npm start
-```
+Biography, education, experience, contact details, project descriptions and image URLs were migrated at the user's request from https://mahadbulle-portweb.vercel.app/. The 11 project screenshots and portrait are referenced from that website. The CV links to its original PDF. Update `lib/data.ts` for future content changes. Contact enquiries open a prefilled WhatsApp message; they are not stored or automatically sent.
 
-The first install creates a package-lock.json. Commit it to pin the resolved dependencies for subsequent `npm ci` installs.
+Production: https://mahad-bue-por.vercel.app/
 
-## Features
-
-- Responsive hero, About, Selected Work, Expertise, Process and Contact sections.
-- Working project category filters and accessible project detail dialogs.
-- Light/dark themes, persisted with next-themes; light by default.
-- Responsive mobile navigation, keyboard focus styles, skip link and reduced-motion support.
-- GitHub contact links and a working profile-link clipboard action. No contact submissions are stored.
-- Downloadable text professional profile.
-- Metadata, favicon and a custom not-found page.
-- Source-owned shadcn/ui Button and Dialog, with components.json configured for adding further components.
-
-## Personalise
-
-Edit `lib/data.ts` for identity, contact links, projects and skills. The hero uses a custom local monogram illustration. Replace it with an authorised local portrait and update `app/page.tsx` if desired. Edit biography text in `app/page.tsx`, styling in `app/globals.css`, and the downloadable profile in `public/Mahad-Bule-Profile.txt`.
-
-The gallery contains **illustrative interface concepts**, clearly labelled in the UI. It does not claim completed client commissions, client revenue, customer counts or real performance results. Profile and contact content use only the supplied name and GitHub account. Add real projects and approved contact details in lib/data.ts.
-
-## Deploy to Vercel
-
-Import this repository at https://vercel.com/new, keep the detected Next.js preset, and deploy. No database, environment variables or paid integrations are required. To use a custom canonical URL, add `metadataBase` and canonical metadata in `app/layout.tsx` after your domain is confirmed.
-
-## Interaction checks
-
-```bash
-npx playwright install --with-deps chromium
-npm run test:e2e
-```
-
-Playwright checks filtering, project details, mobile navigation, theme switching, and the GitHub profile clipboard action. It also saves desktop and mobile screenshots.
-
-## Stack credits
-
-Next.js / React / Tailwind CSS / shadcn/ui (MIT) / Radix UI / Lucide icons / next-themes.
+Deployment access settings are managed separately in Vercel.
